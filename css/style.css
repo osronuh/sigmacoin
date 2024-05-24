@@ -68,8 +68,8 @@ body, html {
     margin: 15% auto; /* 15% отступ сверху и снизу, автоматический отступ слева и справа */
     padding: 20px;
     border: 1px solid #888;
-    width: 10%; /* 80% ширина содержимого модального окна */
-    height: 1cm;
+    width: 50px; /* 80% ширина содержимого модального окна */
+    height: 30px;
     border-radius: 10px;
     color: white;
     cursor: pointer;
