@@ -14,7 +14,7 @@ body, html {
     text-align: center; /* Выравниваем текст по центру */
     height: 100vh; /* Занимаем 100% высоты окна просмотра */
     justify-content: center; /* Выравниваем элементы по центру по вертикали */
-    font-size: 10px;
+    font-size: 5px;
     font-family: 'Courier New', Courier, monospace;
     transition: transform 5s ease;
     color: white;
@@ -27,7 +27,7 @@ body, html {
     transform: scale(1.02);
 }
 .blue-button {
-    top: 10cm;
+    top: 122cm;
     background-color: white; /* Синий цвет фона */
     color: black; /* Белый цвет текста */
     border: none; /* Убираем границу кнопки */
