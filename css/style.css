@@ -14,7 +14,7 @@ body, html {
     text-align: center; /* Выравниваем текст по центру */
     height: 100vh; /* Занимаем 100% высоты окна просмотра */
     justify-content: center; /* Выравниваем элементы по центру по вертикали */
-    font-size: 50px;
+    font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
     transition: transform 5s ease;
     color: white;
@@ -68,8 +68,8 @@ body, html {
     margin: 15% auto; /* 15% отступ сверху и снизу, автоматический отступ слева и справа */
     padding: 20px;
     border: 1px solid #888;
-    width: 30%; /* 80% ширина содержимого модального окна */
-    height: 10cm;
+    width: 1cm; /* 80% ширина содержимого модального окна */
+    height: 2cm;
     border-radius: 10px;
     color: white;
     cursor: pointer;
@@ -89,7 +89,7 @@ body, html {
 #buffx2{
     position: absolute;
     color: black;
-    left: 18.5cm;
+    left: 1.2cm;
     
 }
 .firstbuff{
