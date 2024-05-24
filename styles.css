@@ -70,8 +70,8 @@ body, html {
     margin: 15% auto; /* 15% отступ сверху и снизу, автоматический отступ слева и справа */
     padding: 20px;
     border: 1px solid #888;
-    width: 3%; /* 80% ширина содержимого модального окна */
-    height: 2cm;
+    width: 5%; /* 80% ширина содержимого модального окна */
+    height: 20px;
     border-radius: 10px;
     color: white;
     cursor: pointer;
@@ -91,7 +91,7 @@ body, html {
 #buffx2{
     position: absolute;
     color: black;
-    left: 18.5cm;
+    left: 1cm;
     
 }
 .firstbuff{
