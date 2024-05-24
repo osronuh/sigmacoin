@@ -1,0 +1,99 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: rgb(28, 28, 28);
+}
+.container {
+    display: flex; /* Используем flexbox для центрирования по горизонтали */
+    flex-direction: column; /* Размещаем элементы в столбец */
+    align-items: center; /* Выравниваем элементы по центру по горизонтали */
+    text-align: center; /* Выравниваем текст по центру */
+    height: 100vh; /* Занимаем 100% высоты окна просмотра */
+    justify-content: center; /* Выравниваем элементы по центру по вертикали */
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: transform 5s ease;
+    color: white;
+}
+.container img {
+    max-width: 100%;
+    height: auto;
+}
+.container img:active{
+    transform: scale(1.02);
+}
+.blue-button {
+    top: 10cm;
+    background-color: white; /* Синий цвет фона */
+    color: black; /* Белый цвет текста */
+    border: none; /* Убираем границу кнопки */
+    padding: 10px 20px; /* Задаем отступы для кнопки */
+    border-radius: 5px; /* Закругляем углы */
+    cursor: pointer; /* Устанавливаем курсор в виде указателя */
+}
+
+.blue-button:hover {
+    background-color: gainsboro; /* Изменяем цвет фона при наведении */
+}
+.coin {
+    margin: 2cm; /* Устанавливаем отступ в 1 см снизу */
+    cursor: pointer;
+}
+
+.modal {
+    display: none; /* По умолчанию модальное окно скрыто */
+    position: fixed; /* Фиксированное положение, чтобы оно всегда было поверх содержимого страницы */
+    z-index: 1; /* Определяет порядок расположения элементов (чем выше значение, тем выше элемент) */
+    left: 0;
+    top: 0;
+    width: 100%; /* 100% ширина модального окна */
+    height: 100%; /* 100% высота модального окна */
+    overflow: auto; /* Добавляет прокрутку, если контент слишком большой для окна */
+    background-color: rgba(0,0,0,0); /* Цвет фона с небольшой прозрачностью */
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+  
+  /* Стили для содержимого модального окна */
+.modal-content {
+    background-color: #525252;
+    margin: 15% auto; /* 15% отступ сверху и снизу, автоматический отступ слева и справа */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* 80% ширина содержимого модального окна */
+    height: 10cm;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+  
+#myImg{
+    padding: 5px;
+    left: 1cm;
+    top: 1cm;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color:  white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#buffx2{
+    position: absolute;
+    color: black;
+    left: 18.5cm;
+    
+}
+.firstbuff{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+}
