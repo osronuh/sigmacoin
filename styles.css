@@ -42,6 +42,8 @@ body, html {
 .coin {
     margin: 2cm; /* Устанавливаем отступ в 1 см снизу */
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 .modal {
