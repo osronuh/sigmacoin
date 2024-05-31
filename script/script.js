@@ -4,7 +4,60 @@ document.addEventListener("DOMContentLoaded", function() {
     var clickableImage = document.getElementById("clickableImage");
     var clicksDisplay = document.getElementById("clicks");
     let buffer = parseInt(localStorage.getItem("buffer"));
-
+    document.addEventListener("DOMContentLoaded", function() {
+      var userId = 1;  // Замените на реальный ID пользователя
+      var clicksDisplay = document.getElementById("clicks");
+      var clickableImage = document.getElementById("clickableImage");
+    
+      async function getBalance() {
+          const response = await fetch(`/get_balance?user_id=${userId}`);
+          const data = await response.json();
+          if (response.ok) {
+              clicksDisplay.textContent = data.balance;
+          } else {
+              console.error(data.error);
+          }
+      }
+    
+      async function addCoin() {
+          const response = await fetch('/add_coin', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ user_id: userId })
+          });
+          const data = await response.json();
+          if (response.ok) {
+              clicksDisplay.textContent = data.new_balance;
+          } else {
+              console.error(data.error);
+          }
+      }
+    
+      clickableImage.addEventListener("click", addCoin);
+    
+      // Инициализация текущего баланса при загрузке страницы
+      getBalance();
+      
+      // Сброс данных, если это необходимо
+      document.getElementById("resetButton").addEventListener("click", async function() {
+          const response = await fetch('/reset_balance', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ user_id: userId })
+          });
+          const data = await response.json();
+          if (response.ok) {
+              clicksDisplay.textContent = data.new_balance;
+          } else {
+              console.error(data.error);
+          }
+      });
+    });
+    
     // Устанавливаем начальное значение счетчика на странице
     clicksDisplay.textContent = clickCount;
 
